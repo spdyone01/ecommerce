@@ -48,7 +48,6 @@ export const StateContext = ({ children }) => {
     setTotalPrice(
       (prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.qty
     );
-    debugger;
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.qty);
     setCartItems(newCartItems);
   };
@@ -98,7 +97,9 @@ export const StateContext = ({ children }) => {
         cartItems,
         onRemove,
         toggleCartItemQuantity,
+        setTotalPrice,
         totalPrice,
+        setTotalQuantities,
         totalQuantities,
         qty,
         incQty,
